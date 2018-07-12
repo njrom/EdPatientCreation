@@ -3,22 +3,24 @@ from lackey import *
 from Patients import Patients
 
 
-USERNAME = "ADTADM"
-DEPARTMENT = "SMH Admitting"
+USERNAME = "ADTEDREG"
+DEPARTMENT = "SMH ED"
 PATIENT_NUMBER = 1  # This is the number that dictates the patient name, if the patient exists already, raise it
 
 
 def main():
     patients = Patients(PATIENT_NUMBER)
-    patients.addPatients("patientsData.csv",5)
+    patients.addPatients("patientsData.csv", 5)
     login()
 
     for patient in patients.list:
         print(patient["name"])
-        #--------------------------
+        # --------------------------
         # Workflow for each patient
         # goes here now
-        #--------------------------
+        # --------------------------
+
+
 
 def login():
     App.focus("Hyperspace - URMC POC")
