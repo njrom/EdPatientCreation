@@ -36,7 +36,7 @@ class Patients:
             for i in range(numOfPatients - counter):
 
                 patient = self.list[-1].copy()
-                patient["name"] = self.int_to_en(self.PATIENT_NUM) + ",ATP"
+                patient["name"] = self.int_to_en(self.PATIENT_NUM) + ","+PROJECT_NAME
                 patient["ssn"] = (9 - len(str(self.PATIENT_NUM))) * "5" + str(self.PATIENT_NUM)
                 self.list.append(patient)
                 self.PATIENT_NUM +=1
