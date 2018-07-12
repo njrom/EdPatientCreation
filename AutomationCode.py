@@ -14,6 +14,8 @@ def main():
     login()
 
     for patient in patients.list:
+        createPatient(patient)
+        arrive(patient)
         # --------------------------
         # Workflow for each patient
         # goes here now
@@ -57,5 +59,9 @@ def createPatient(patient):
         click("New.png")
     wait(3)
 
+def arrive(patient):
+    click("NewEDArrival.png")
+    wait(3)
+    type(patient["date"])
 
 main()
